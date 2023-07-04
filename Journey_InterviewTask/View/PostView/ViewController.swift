@@ -48,11 +48,21 @@ class ViewController: UIViewController {
         tableViewPost.reloadData()
         
         searchView.delegate = self
+        
+        let image = UIImage(named: "addImage")?.withRenderingMode(.alwaysTemplate)
+        let backItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(addPost))
+        backItem.tintColor = .white
+        self.navigationItem.rightBarButtonItem = backItem
+
     }
     
     //MARK:- IBAction
     @IBAction func likeCommentAction(_ sender: Any) {
         showAlertMessage(titleStr: "", messageStr: AlertTitles.comingSoon)
+    }
+    
+    @objc func addPost(sender: UIBarButtonItem) {
+        showAlertMessage(titleStr: AlertTitles.addPost, messageStr: AlertTitles.comingSoon)
     }
     
     //post api call

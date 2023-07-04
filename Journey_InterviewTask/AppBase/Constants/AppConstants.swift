@@ -22,5 +22,6 @@ struct AlertTitles {
     static let internetMessage : String = "It look like you've lost your internet connection.Try again once your connection is back."
     static let commentsTitle = "Comments"
     static let comingSoon = "Coming Soon!"
+    static let addPost = "Add Post"
 }
 
